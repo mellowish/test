@@ -61,12 +61,51 @@ Master branch is where your production code is and where your default items are.
 \
 Here\'92s how we actually commit things/push\
 \
+we tell it where we want to put things here.\
+\
+MacBook-Pro-6:test Melissa$ git remote add origin https://github.com/mellowish/test.git\
+\
 MacBook-Pro-6:test Melissa$ git push -u origin master\
 Username for 'https://github.com': mellowish\
 Password for 'https://mellowish@github.com': \
 \
 To add this notes file:\
 \
-add gitnotes.rtf\
+git add gitnotes.rtf\
 git commit -m "Adding notes file"\
+git push -u origin master\
+\
+Yay! It worked! \
+\
+Now we\'92ll make a code folder\
+\
+mkdir code\
+\
+touch ./code/data_manage.R # the dot is telling it to stay in the present directory, two dots tells it to stay in the present directory\
+\
+git status\
+\
+there is an untracked file within the code folder. it\'92s not tracking the changes. we need to add the file or folder or both\
+\
+\
+git add code\
+git add code/data_manage.R\
+\
+What happened to git status? we want it to be tracking it\
+\
+git status\
+\
+start vim, it\'92s a modal editor. you start in normal mode without being able to add text. press a or i.\
+esc\
+\
+\
+To get out of vim write :wq\
+\
+Now that I\'92ve made changes, \
+git add readme.md\
+git commit -m \'93readme update\'94\
+git push origin master\
+\
+\
+\
 }
